@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center min-h-[100vh]">
       <h1>Environment: {environment}</h1>
+      <h1>This is the staging branch</h1>
       <Lottie
         autoplay={true}
         loop={true}
