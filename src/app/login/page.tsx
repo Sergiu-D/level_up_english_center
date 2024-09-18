@@ -50,17 +50,21 @@ export default function Login() {
       handleSubmit(isValue);
     }
   }, [value]);
+  console.log("🚀 ~ Login ~ response:", response)
 
   return (
     <div className="flex flex-col gap-7 h-[100vh] items-center justify-center">
       <div className="flex flex-col relative">
         <h1 className="font-semibold text-2xl mb-5">Enter code:</h1>
-        <div className="">
+        <div className={!!response ? "shake-animation" : ""}>
           <InputOTP
             maxLength={maxLength}
-            onChange={(ev: string) => setValue(ev)}
+            onChange={(ev: string) => {
+              if(!!response) setResponse("");
+              setValue(ev)
+            }}
             pattern={REGEXP_ONLY_DIGITS}
-            className="gap-2"
+            className={`gap-2`}
             disabled={isLoading}
           >
             <InputOTPGroup>
