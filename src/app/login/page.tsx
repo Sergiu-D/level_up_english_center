@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/input-otp"
 
 export default function Login() {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState<string | null>(null);
   const [response, setResponse] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -43,11 +43,13 @@ export default function Login() {
     }
   };
 
-  useEffect(()=>{
-    if(value?.length === maxLength){
-      handleSubmit(value)
+  const isValue = !value ? "" : value
+
+  useEffect(() => {
+    if (isValue?.length === maxLength) {
+      handleSubmit(isValue);
     }
-  },[value])
+  }, [value]);
 
   return (
     <div className="flex flex-col gap-7 h-[100vh] items-center justify-center">
@@ -56,7 +58,7 @@ export default function Login() {
         <div className="">
           <InputOTP
             maxLength={maxLength}
-            onChange={(ev) => setValue(ev)}
+            onChange={(ev: string) => setValue(ev)}
             pattern={REGEXP_ONLY_DIGITS}
             className="gap-2"
             disabled={isLoading}
