@@ -1,0 +1,80 @@
+[
+  {
+    "label": "Acasa",
+    "path": "/"
+  },
+  {
+    "label": "Pregatire Cambridge",
+    "path": "/",
+    "featured": {
+      "title": "Cambridge exams",
+      "description":
+        "Cambridge exams are recognised as qualifications that certify knowledge of the English language.",
+      "image": "/assets/prepare-cambridge.jpg"
+    },
+    "subLinks": [
+      {
+        "label": "Cursuri KET",
+        "description":
+          "A2 Key is one of the Cambridge English qualifications. This basic level qualification is designed to start your learning of English.",
+        "path": "/cursuri-cambridge/ket",
+        "image": "/assets/ket.jpg"
+      },
+      {
+        "label": "Cursuri PET",
+        "description":"B1 Preliminary is one of the Cambridge English qualifications. With this exam, you demonstrate that you have mastered the fundamentals of English.",
+        "path": "/cursuri-cambridge/pet",
+        "image": "/assets/pet.jpg"
+      },
+      {
+        "label": "Cursuri FCE",
+        "description": "B2 First is one of the most popular Cambridge English qualifications and is recognised worldwide by thousands of employers and educational institutions.",
+        "path": "/cursuri-cambridge/fce",
+        "image": "/assets/fce.jpg"
+      },
+      {
+        "label": "Cursuri CAE",
+        "description":"C1 Advanced is one of the Cambridge English qualifications. It is our top-level qualification, which shows that you have the language skills that employers and universities are looking for.",
+        "path": "/cursuri-cambridge/cae",
+        "image": "/assets/cae.jpg"
+      }
+    ]
+  },
+  {
+    "label": "Adulti",
+    "path": "/",
+    "featured": {
+      "title": "Cursuri pentru adulti",
+      "description":
+        "Cambridge exams are recognised as qualifications that certify knowledge of the English language.",
+      "image": "/assets/prepare-cambridge.jpg"
+    },
+    "subLinks": [
+      {
+        "label": "Cursuri de engleza conversationala",
+        "description":
+          "A2 Key is one of the Cambridge English qualifications. This basic level qualification is designed to start your learning of English.",
+        "path": "/cursuri-adulti/curs-conversational",
+        "image": "/assets/ket.jpg"
+      },
+      {
+        "label": "Cursuri individuale de engleza",
+        "description":"B1 Preliminary is one of the Cambridge English qualifications. With this exam, you demonstrate that you have mastered the fundamentals of English.",
+        "path": "/cursuri-adulti/curs-individual",
+        "image": "/assets/pet.jpg"
+      }
+    ]
+  },
+  {
+    "label": "Oferte",
+    "path": "/oferte"
+  },
+  {
+    "label": "Despre noi",
+    "path": "/despre-noi"
+  },
+  {
+    "label": "Contact",
+    "path": "/contact"
+  }
+]
