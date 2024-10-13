@@ -1,19 +1,19 @@
-"use client"
-import Lottie from 'lottie-react';
-import siteUnderConstructionAnimation from '../../public/animations/site-under-construction.json';
+
+
+import Navigation from  "@/components/Navigation";
 
 export default function Home() {
-  const environment = process.env.NEXT_PUBLIC_NODE_ENVIRONMENT;
   return (
-    <main className="flex flex-col justify-center items-center min-h-[100vh]">
-      <h1>Environment: {environment}</h1>
-      <h1>This is the staging branch</h1>
-      <Lottie
-        autoplay={true}
-        loop={true}
-        animationData={siteUnderConstructionAnimation}
-        className="w-[100vw] h-[100vh]"
-      />
-    </main>
+    <>
+      <header className="max-w-8xl mx-auto">
+        <Navigation />
+      </header>
+      <main className="flex flex-col items-center [&_>_*]:max-w-7xl [&_>_*]:w-full">
+        <section className="bg-slate-200 !max-w-8xl">First section</section>
+        <section className="bg-slate-500">Second section</section>
+        <section className="bg-slate-700">Third section</section>
+      </main>
+      <footer className="max-w-8xl mx-auto">Footer section</footer>
+    </>
   );
 }
