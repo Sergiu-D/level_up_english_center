@@ -4,12 +4,8 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 // Messages
-import { navigationLinks } from "./messages";
-// import dynamic from "next/dynamic";
-// import { ChevronDown } from "lucide-react";
-
-// import placeholderImage from "@/public/assets/image-placeholder";
-
+import navigationLinks from "./messages.json";
+// Components
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -55,7 +51,7 @@ export default function Navbar() {
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                           <div className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                            <div className="row-span-3">
+                            <div className="row-span-10">
                               <NavigationMenuLink asChild>
                                 <a
                                   className="flex h-full w-full select-none flex-col justify-between rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -67,10 +63,11 @@ export default function Navbar() {
                                         ? activeSubLink.image
                                         : link.featured.image
                                     }
-                                    width={100}
-                                    height={100}
+                                    quality={100}
+                                    width={400}
+                                    height={400}
                                     alt=""
-                                    className="h-16 w-16 mb-4"
+                                    className="h-25 w-full mb-4"
                                   />
                                   <div className="mb-2 mt-4 text-lg font-medium">
                                     {activeSubLink
@@ -86,21 +83,25 @@ export default function Navbar() {
                               </NavigationMenuLink>
                             </div>
                             {link.subLinks.map((subLink) => (
-                              <NavigationMenuLink key={subLink.path} asChild>
-                                <a
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                  href={subLink.path}
-                                  onMouseEnter={() => setActiveSubLink(subLink)}
-                                //   onMouseLeave={() => setActiveSubLink(null)}
-                                >
-                                  <div className="text-sm font-medium leading-none">
-                                    {subLink.label}
-                                  </div>
-                                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                    {subLink.description}
-                                  </p>
-                                </a>
-                              </NavigationMenuLink>
+                              <div key={subLink.path} className="col-start-2">
+                                <NavigationMenuLink asChild>
+                                  <a
+                                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                    href={subLink.path}
+                                    onMouseEnter={() =>
+                                      setActiveSubLink(subLink)
+                                    }
+                                    //   onMouseLeave={() => setActiveSubLink(null)}
+                                  >
+                                    <div className="text-sm font-medium leading-none">
+                                      {subLink.label}
+                                    </div>
+                                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                      {subLink.description}
+                                    </p>
+                                  </a>
+                                </NavigationMenuLink>
+                              </div>
                             ))}
                           </div>
                         </NavigationMenuContent>
