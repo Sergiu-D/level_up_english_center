@@ -42,12 +42,12 @@ export default function Navbar() {
           <div className="hidden md:block">
             <NavigationMenu>
               <NavigationMenuList className="flex gap-3">
-                {navigationLinks.map((link) => (
-                  <NavigationMenuItem key={link.path}>
+                {navigationLinks.map((link, linkIndex) => (
+                  <NavigationMenuItem key={`${link.path}-${linkIndex}`}>
                     {link.subLinks ? (
                       <>
                         <NavigationMenuTrigger className="bg-black text-white hover:bg-gray-800">
-                          {link.label} 
+                          {link.label}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                           <div className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -82,8 +82,11 @@ export default function Navbar() {
                                 </a>
                               </NavigationMenuLink>
                             </div>
-                            {link.subLinks.map((subLink) => (
-                              <div key={subLink.path} className="col-start-2">
+                            {link.subLinks.map((subLink, subLinkIndex) => (
+                              <div
+                                key={`${subLink.path}-${subLinkIndex}`}
+                                className="col-start-2"
+                              >
                                 <NavigationMenuLink asChild>
                                   <a
                                     className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -138,8 +141,11 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <Accordion type="single" collapsible className="w-full">
-            {navigationLinks.map((link) => (
-              <AccordionItem key={link.path} value={link.path}>
+            {navigationLinks.map((link, linkIndex) => (
+              <AccordionItem
+                key={`${link.path}-${linkIndex}`}
+                value={link.path}
+              >
                 {link.subLinks ? (
                   <>
                     <AccordionTrigger className="text-white hover:bg-gray-800 px-3 py-2 text-base font-medium">
@@ -147,8 +153,11 @@ export default function Navbar() {
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="pl-4 space-y-2">
-                        {link.subLinks.map((subLink) => (
-                          <div key={subLink.path} className="space-y-1">
+                        {link.subLinks.map((subLink, subLinkIndex) => (
+                          <div
+                            key={`${subLink.path}-${subLinkIndex}`}
+                            className="space-y-1"
+                          >
                             <Link
                               href={subLink.path}
                               className="text-white hover:bg-gray-800 block px-3 py-2 rounded-md text-sm font-medium"
