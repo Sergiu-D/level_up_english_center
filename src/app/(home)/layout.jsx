@@ -25,9 +25,8 @@ export default function RootLayout({
         <header className="max-w-8xl mx-auto">
           <Navigation />
         </header>
-        <main className="flex flex-col items-center [&_>_*]:max-w-7xl [&_>_*]:w-full">
+        {/* See the ./template.jsx for the main element */}
           {children}
-        </main>
         <footer className="max-w-8xl mx-auto">Footer section</footer>
       </body>
     </html>
