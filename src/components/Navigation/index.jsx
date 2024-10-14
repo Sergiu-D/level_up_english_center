@@ -21,17 +21,22 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+// Hooks
+import { useScrollDirection } from "@/hooks/useScrollDirection";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [activeSubLink, setActiveSubLink] = React.useState(null);
+
+  const isScrollingUp = useScrollDirection(0.2);
+  console.log("🚀 ~ Navbar ~ isScrollingUp:", isScrollingUp)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="bg-black text-white">
+    <nav className={`bg-black text-white left-0 right-0 z-10 fixed ${isScrollingUp ? "top-0" : "-top-20"} transition-all duration-300`}>
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
