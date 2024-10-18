@@ -14,6 +14,27 @@
     },
     "subLinks": [
       {
+        "label": "Cursuri Flyers",
+        "description":
+          "A2 Key is one of the Cambridge English qualifications. This basic level qualification is designed to start your learning of English.",
+        "path": "/cursuri/cambridge/flyers",
+        "image": "/assets/ket.jpg"
+      },
+      {
+        "label": "Cursuri Movers",
+        "description":
+          "A2 Key is one of the Cambridge English qualifications. This basic level qualification is designed to start your learning of English.",
+        "path": "/cursuri/cambridge/movers",
+        "image": "/assets/ket.jpg"
+      },
+      {
+        "label": "Cursuri Starters",
+        "description":
+          "A2 Key is one of the Cambridge English qualifications. This basic level qualification is designed to start your learning of English.",
+        "path": "/cursuri/cambridge/starters",
+        "image": "/assets/ket.jpg"
+      },
+      {
         "label": "Cursuri KET",
         "description":
           "A2 Key is one of the Cambridge English qualifications. This basic level qualification is designed to start your learning of English.",
