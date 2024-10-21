@@ -16,10 +16,29 @@ const config: Config = {
       },
     },
     extend: {
+      boxShadow: {
+        link: "4px 6px 0 0 hsl(var(--secondary))",
+        card: "-10px 10px 15px 7px #2B2F77, -10px -7px 27px 1px #D61216, 0px 43px 37px 38px rgba(0,0,0,0);",
+      },
       maxWidth: {
-        "8xl": "1980px",
+        fullScreen: "1980px",
+        section: "1536px",
       },
       colors: {
+        primary: {
+          dark: "#1C1E4A",
+          light: "#5751E1",
+          DEFAULT: "#2B2F77",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+
+        secondary: {
+          dark: "#830B0D",
+          light: "#F3686A",
+          // DEFAULT: "#D61216",
+          DEFAULT: "hsl(359, 85%, 68%)",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -32,14 +51,6 @@ const config: Config = {
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
-        },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
