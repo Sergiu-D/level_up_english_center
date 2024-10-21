@@ -1,3 +1,4 @@
+
 [
   {
     "label": "Acasa",
@@ -7,14 +8,14 @@
     "label": "Pregatire Cambridge",
     "path": "/",
     "featured": {
-      "title": "Cambridge exams",
+      "title": "Cambridge {{ examName }}",
       "description":
         "Cambridge exams are recognised as qualifications that certify knowledge of the English language.",
       "image": "/assets/prepare-cambridge.jpg"
     },
     "subLinks": [
       {
-        "label": "Cursuri Flyers",
+        "label": "Cursuri {{ zeroToForLessons }}",
         "description":
           "A2 Key is one of the Cambridge English qualifications. This basic level qualification is designed to start your learning of English.",
         "path": "/cursuri/cambridge/flyers",
