@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 // Messages
-import navigationLinks from "./messages.json";
+import navigationMessages from "@/messages/navigation.json";
 // Components
 import { Button } from "@/components/ui/button";
 import {
@@ -23,6 +23,8 @@ import {
 } from "@/components/ui/accordion";
 // Hooks
 import { useScrollDirection } from "@/hooks/useScrollDirection";
+// Utils
+import { applyVariablesToJson } from "@/utils/applyVariablesToJson";
 
 export default function Navbar() {
   const navRef = useRef(null);
@@ -39,13 +41,15 @@ export default function Navbar() {
     if (navRef.current) {
       setNavHeight(navRef.current?.offsetHeight);
     }
-  }, [navRef.current?.offsetHeight]);
+  }, []);
+
+  const navigationLinks = applyVariablesToJson(navigationMessages); 
 
   return (
-    <div className={`h-[${navHeight}px]`}>
+    <div className={`block !h-[64px] bg-black`}>
       <nav
         ref={navRef}
-        className={`isolate w-full max-h-fit bg-black/70 shadow-lg ring-1 ring-black/2 backdrop-blur-md  text-white left-0 right-0 z-10 fixed ${
+        className={`backdrop-blur-md  text-white left-0 right-0 z-10 fixed ${
           isScrollingUp ? "top-0" : "-top-20"
         } transition-all duration-300`}
       >
