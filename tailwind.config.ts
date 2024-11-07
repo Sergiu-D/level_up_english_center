@@ -24,6 +24,14 @@ const config: Config = {
         fullScreen: "1980px",
         section: "1536px",
       },
+      minWidth: {
+        fullScreen: "1980px",
+        section: "1536px",
+      },
+      width: {
+        fullScreen: "1980px",
+        section: "1536px",
+      },
       colors: {
         primary: {
           dark: "#1C1E4A",
