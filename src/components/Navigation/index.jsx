@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 // Messages
-import navigationMessages from "@/messages/navigation.json";
+import navigationMessages from "@/messages/shared/navigation.json";
 // Components
 import { Button } from "@/components/ui/button";
 import {
@@ -46,7 +46,7 @@ export default function Navbar() {
   const navigationLinks = applyVariablesToJson(navigationMessages); 
 
   return (
-    <div className={`block !h-[64px] bg-black`}>
+    <div className={`block !h-[${navHeight}px] bg-black`}>
       <nav
         ref={navRef}
         className={`backdrop-blur-md  text-white left-0 right-0 z-10 fixed ${

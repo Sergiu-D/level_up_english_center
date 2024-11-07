@@ -1,4 +1,4 @@
-import navMessages from "@/components/Navigation/messages.json";
+import navMessages from "@/messages/shared/navigation.json";
 // Utils
 import getFilteredPaths from "@/utils/getFilteredPaths";
 
