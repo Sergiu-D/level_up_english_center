@@ -1,60 +1,70 @@
-import { Check, Trophy, Banknote, Book } from "lucide-react";
+import { Trophy, Heart, Puzzle, Layers } from "lucide-react";
 
-export default function Component() {
+export default function AboutSection() {
   return (
-    <section className="bg-[#F5F5F5] py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#5751E1] mb-8">
-          De ce să ne alegi?
-        </h1>
-        <div className="flex flex-wrap justify-center -mx-3">
-          {[
-            {
-              icon: <Check className="w-6 h-6 text-white" />,
-              title: "Avem 100% promovabilitate la examenele CAMBRIDGE",
-              description:
-                "De 11 ani avem 100% promovabilitate la examenele CAMBRIDGE.",
-              bgColor: "bg-[#F1D058]",
-            },
-            {
-              icon: <Trophy className="w-6 h-6 text-white" />,
-              title:
-                "Suntem cel mai bun centru de pregătire CAMBRIDGE PET din lume",
-              description:
-                "Conform raportului emis de Cambridge Assessment English din anul școlar 2022 - 2023.",
-              bgColor: "bg-[#F3686A]",
-            },
-            {
-              icon: <Banknote className="w-6 h-6 text-white" />,
-              title: "Oferim integral banii înapoi",
-              description:
-                "În cazul în care copilul dvs. nu promovează examenul CAMBRIDGE, vă oferim integral banii înapoi (conform regulamentului).",
-              bgColor: "bg-[#F3686A]",
-            },
-            {
-              icon: <Book className="w-6 h-6 text-white" />,
-              title: "Ședințele de curs nu se pierd",
-              description:
-                "În cazul absentării, ședințele de curs nu se pierd. Profesorul va transmite pe mail-ul părintelui informația pierdută și se va asigura la întoarcerea cursantului că acesta a asimilat corect informația.",
-              bgColor: "bg-[#5751E1]",
-            },
-          ].map((item, index) => (
-            <div key={index} className="w-full md:w-1/2 px-3 mb-6">
-              <div className="bg-white p-6 rounded-lg shadow-md h-full">
-                <div className="flex items-start">
-                  <div className={`mr-4 p-2 rounded-lg ${item.bgColor}`}>
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-[#5751E1] mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-gray-600">{item.description}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+    <section className="py-16 px-4 max-w-7xl mx-auto">
+      {/* Main heading */}
+      <div className="text-center mb-16 max-w-3xl mx-auto">
+        <h2 className="text-base sm:text-lg md:text-xl text-center mb-4">
+          De ce sa ne alegi?
+        </h2>
+        <p className="text-sm sm:text-base text-muted-foreground">
+          Misiunea noastră este să cultivăm pasiunea pentru învățarea limbilor
+          străine și să pregătim cursanți pentru a deveni cetățeni globali,
+          informați și responsabili.
+        </p>
+      </div>
+
+      {/* Grid of features */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0">
+        {/* Professionalism */}
+        <div className="flex flex-col items-center text-center md:border-r md:border-b border-gray-200 p-6">
+          <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-orange-50">
+            <Trophy className="w-8 h-8 text-orange-500" />
+          </div>
+          <h3 className="text-xl font-semibold mb-3">Profesionalism</h3>
+          <p className="text-sm text-muted-foreground">
+            Ne înconjurăm de oameni entuziaști, profesioniști în domeniile lor
+            de activitate, de la profesori la coordonatori de cursuri
+          </p>
+        </div>
+
+        {/* Passion and involvement */}
+        <div className="flex flex-col items-center text-center md:border-b border-gray-200 p-6">
+          <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-orange-50">
+            <Heart className="w-8 h-8 text-orange-500" />
+          </div>
+          <h3 className="text-xl font-semibold mb-3">Pasiune și implicare</h3>
+          <p className="text-sm text-muted-foreground">
+            Punem multă pasiune și ne implicăm activ în procesul educațional,
+            motivând și inspirând cursanții să își atingă potențialul
+          </p>
+        </div>
+
+        {/* Student needs focus */}
+        <div className="flex flex-col items-center text-center md:border-r border-gray-200 p-6">
+          <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-orange-50">
+            <Puzzle className="w-8 h-8 text-orange-500" />
+          </div>
+          <h3 className="text-xl font-semibold mb-3">
+            Focus pe nevoile cursantului
+          </h3>
+          <p className="text-sm text-muted-foreground">
+            Înțelegem nevoile fiecărui cursant și personalizăm experiența de
+            învățare pentru a face cursurile cât mai eficiente
+          </p>
+        </div>
+
+        {/* Respect */}
+        <div className="flex flex-col items-center text-center p-6">
+          <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-orange-50">
+            <Layers className="w-8 h-8 text-orange-500" />
+          </div>
+          <h3 className="text-xl font-semibold mb-3">Respect</h3>
+          <p className="text-sm text-muted-foreground">
+            Promovăm un mediu bazat pe sprijin și respect, esențiale pentru
+            dezvoltarea personală și succesul academic
+          </p>
         </div>
       </div>
     </section>

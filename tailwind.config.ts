@@ -1,20 +1,7 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+const config = {
   darkMode: ["class"],
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       boxShadow: {
         link: "4px 6px 0 0 hsl(var(--secondary))",
@@ -36,7 +23,7 @@ const config: Config = {
         primary: {
           dark: "#1C1E4A",
           light: "#5751E1",
-          DEFAULT: "#2B2F77",
+          DEFAULT: "#090E93",
           foreground: "hsl(var(--primary-foreground))",
         },
 
@@ -44,7 +31,7 @@ const config: Config = {
           dark: "#830B0D",
           light: "#F3686A",
           // DEFAULT: "#D61216",
-          DEFAULT: "hsl(359, 85%, 68%)",
+          DEFAULT: "#BA0000",
           foreground: "hsl(var(--secondary-foreground))",
         },
         border: "hsl(var(--border))",
@@ -73,11 +60,11 @@ const config: Config = {
           foreground: "hsl(var(--destructive-foreground))",
         },
         chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))",
+          1: "hsl(var(--chart-1))",
+          2: "hsl(var(--chart-2))",
+          3: "hsl(var(--chart-3))",
+          4: "hsl(var(--chart-4))",
+          5: "hsl(var(--chart-5))",
         },
       },
       borderRadius: {

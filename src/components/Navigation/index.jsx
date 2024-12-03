@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+// import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 // Messages
@@ -28,7 +29,7 @@ import { applyVariablesToJson } from "@/utils/applyVariablesToJson";
 
 export default function Navbar() {
   const navRef = useRef(null);
-  const [navHeight, setNavHeight] = useState(0);
+  // const [navHeight, setNavHeight] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubLink, setActiveSubLink] = useState(null);
 
@@ -37,16 +38,16 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    if (navRef.current) {
-      setNavHeight(navRef.current?.offsetHeight);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (navRef.current) {
+  //     setNavHeight(navRef.current?.offsetHeight);
+  //   }
+  // }, []);
 
   const navigationLinks = applyVariablesToJson(navigationMessages); 
 
   return (
-    <div className={`block !h-[${navHeight}px] bg-black`}>
+    <div className={`block !h-[64px] bg-black`}>
       <nav
         ref={navRef}
         className={`backdrop-blur-md  text-white left-0 right-0 z-10 fixed ${

@@ -1,7 +1,8 @@
 // Sections
 import Hero from "@/sections/home/Hero";
-import EnglishLessons from "@/sections/home/EnglishLessons";
+import Lessons from "@/sections/home/Lessons";
 import Offer from "@/sections/home/Offer";
+import Contact from "@/sections/home/Contact";
 // Meta
 export const metadata = {
   title: "Create Next App",
@@ -11,20 +12,18 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <section className="bg-slate-500 !max-w-fullScreen h-screen">
-        <Hero/>
+      <section className="!max-w-fullScreen h-[85vh] lg:h-[75vh]">
+        <Hero />
       </section>
-      <section className="bg-[#F5F5F5] py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
         <Offer />
       </section>
-      <section className="bg-gray-300 !max-w-fullScreen py-20 my-20">
+      <section className="!max-w-fullScreen">
         <div className="lg:max-w-section m-[0_auto]">
-          <EnglishLessons />
+          <Lessons />
         </div>
       </section>
-      <section className="bg-slate-700 h-[60vh]">Forth section</section>
-      <section className="bg-slate-700 h-[60vh]">Fifth section</section>
+      <section><Contact /></section>
     </>
   );
 }
-1416;

@@ -1,43 +1,36 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/I834dw7Bvdu
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import Image from "next/image";
-import Link from "next/link";
+// Components
+import LinkCustom from "@/components/ui/link";
 
-export default function Component() {
+export default function Hero() {
   return (
-    <div className="relative w-full h-screen flex">
-      <Image
-        src="/assets/placeholder.svg"
-        alt="Hero"
-        className="absolute inset-0 object-cover w-full h-full"
-        width={1000}
-        height={1000}
-      />
-      <div className="relative z-10 lg:min-w-section">
+    <div className="relative overflow-hidden w-full h-full flex flex-col justify-center">
+      <div className="relative z-10 w-full xl:w-1/2 h-1/2 flex flex-col justify-center items-center xl:ml-32">
         <div className="gap-4 p-4 md:gap-10">
-          <div className="flex flex-col justify-center items-start">
-            <div className="grid gap-4">
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 dark:text-gray-50">
-                Welcome to the Team
-              </h1>
-              <p className="max-w-[700px] text-gray-500 dark:text-gray-400">
-                Your one-stop shop for all employee resources. From onboarding
-                to professional development, we&apos;ve got you covered.
-              </p>
-            </div>
-            <Link
-              href="#"
-              className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white text-sm font-medium shadow-sm w-24 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-              prefetch={false}
-            >
-              Join Now
-            </Link>
+          <div className="flex flex-col gap-10 justify-center items-center text-center xl:text-left xl:items-start">
+            <h1 className="font-bold text-5xl flex flex-col">
+              Învață engleza într-un mod{" "}
+              <span className="from-primary from-0% to-secondary to-80% bg-clip-text text-transparent bg-gradient-to-r leading-[60px]">
+                distractiv, simplu și ușor!
+              </span>
+            </h1>
+            <p className="text-3xl">
+              Pregatire Cambridge pentru copii de gimnaziu, liceu dar si cursuri
+              de engleza pentru adulti.
+            </p>
+            <LinkCustom href="/contact">Contact</LinkCustom>
           </div>
         </div>
       </div>
+      {/* <div className="w-full xl:w-1/2 h-1/2"> */}
+      <Image
+        src="/assets/placeholder.svg"
+        alt="Hero"
+        className="absolute inset-0 object-cover w-full h-full z-0"
+        width={800}
+        height={500}
+      />
+      {/* </div> */}
     </div>
   );
 }
