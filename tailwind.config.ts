@@ -23,6 +23,7 @@ const config = {
         primary: {
           dark: "#1C1E4A",
           light: "#5751E1",
+          lighter: "#c9c7f0",
           DEFAULT: "#090E93",
           foreground: "hsl(var(--primary-foreground))",
         },
@@ -30,8 +31,16 @@ const config = {
         secondary: {
           dark: "#830B0D",
           light: "#F3686A",
+          lighter: "#ffd6d7",
           // DEFAULT: "#D61216",
           DEFAULT: "#BA0000",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        accent: {
+          dark: "#D98508",
+          light: "#F1D058",
+          lighter: "#ffe8c7",
+          DEFAULT: "#F8AD40",
           foreground: "hsl(var(--secondary-foreground))",
         },
         border: "hsl(var(--border))",
@@ -50,10 +59,6 @@ const config = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
