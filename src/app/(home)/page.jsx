@@ -1,7 +1,9 @@
 // Sections
 import Hero from "@/sections/home/Hero";
 import Lessons from "@/sections/home/Lessons";
-import Offer from "@/sections/home/Offer";
+import EnglishLessons from "@/sections/home/EnglishLessons";
+import Features from "@/sections/home/Features";
+import RegistrationSteps from "@/sections/home/RegistrationSteps";
 import Contact from "@/sections/home/Contact";
 // Meta
 export const metadata = {
@@ -15,15 +17,26 @@ export default function Home() {
       <section className="!max-w-fullScreen h-[85vh] lg:h-[75vh]">
         <Hero />
       </section>
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="bg-gray-50 px-8 mt-[-2rem]">
+        <Features />
+      </section>
+      {/* <section className="">
         <Offer />
+      </section> */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <RegistrationSteps />
       </section>
       <section className="!max-w-fullScreen">
         <div className="lg:max-w-section m-[0_auto]">
           <Lessons />
         </div>
       </section>
-      <section><Contact /></section>
+      <section className="!max-w-fullScreen">
+          <EnglishLessons />
+      </section>
+      <section>
+        <Contact />
+      </section>
     </>
   );
 }
