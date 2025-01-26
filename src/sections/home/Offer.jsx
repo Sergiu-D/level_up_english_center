@@ -2,9 +2,9 @@ import { Trophy, Heart, Puzzle, Layers } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto">
+    <>
       {/* Main heading */}
-      <div className="text-center mb-16 max-w-3xl mx-auto">
+      <div className="text-center max-w-3xl mx-auto">
         <h2 className="text-base sm:text-lg md:text-xl text-center mb-4">
           De ce sa ne alegi?
         </h2>
@@ -15,58 +15,115 @@ export default function AboutSection() {
         </p>
       </div>
 
-      {/* Grid of features */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0">
-        {/* Professionalism */}
-        <div className="flex flex-col items-center text-center md:border-r md:border-b border-gray-200 p-6">
-          <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-orange-50">
-            <Trophy className="w-8 h-8 text-orange-500" />
-          </div>
-          <h3 className="text-xl font-semibold mb-3">Profesionalism</h3>
-          <p className="text-sm text-muted-foreground">
-            Ne înconjurăm de oameni entuziaști, profesioniști în domeniile lor
-            de activitate, de la profesori la coordonatori de cursuri
-          </p>
-        </div>
+      <section className="py-10 bg-white sm:py-16 lg:py-24">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 text-center sm:grid-cols-2 gap-y-8 lg:grid-cols-4 sm:gap-12">
+            <div>
+              <div className="flex items-center justify-center w-20 h-20 mx-auto bg-blue-100 rounded-full">
+                <svg
+                  className="text-blue-600 w-9 h-9"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinecap="round"
+                    stroke-width="1.5"
+                    d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"
+                  />
+                </svg>
+              </div>
+              <h3 className="mt-8 text-lg font-semibold text-black">
+                Secured Payments
+              </h3>
+              <p className="mt-4 text-sm text-gray-600">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+              </p>
+            </div>
 
-        {/* Passion and involvement */}
-        <div className="flex flex-col items-center text-center md:border-b border-gray-200 p-6">
-          <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-orange-50">
-            <Heart className="w-8 h-8 text-orange-500" />
-          </div>
-          <h3 className="text-xl font-semibold mb-3">Pasiune și implicare</h3>
-          <p className="text-sm text-muted-foreground">
-            Punem multă pasiune și ne implicăm activ în procesul educațional,
-            motivând și inspirând cursanții să își atingă potențialul
-          </p>
-        </div>
+            <div>
+              <div className="flex items-center justify-center w-20 h-20 mx-auto bg-orange-100 rounded-full">
+                <svg
+                  className="text-orange-600 w-9 h-9"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinecap="round"
+                    stroke-width="1.5"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 className="mt-8 text-lg font-semibold text-black">
+                Fast & Easy to Load
+              </h3>
+              <p className="mt-4 text-sm text-gray-600">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+              </p>
+            </div>
 
-        {/* Student needs focus */}
-        <div className="flex flex-col items-center text-center md:border-r border-gray-200 p-6">
-          <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-orange-50">
-            <Puzzle className="w-8 h-8 text-orange-500" />
-          </div>
-          <h3 className="text-xl font-semibold mb-3">
-            Focus pe nevoile cursantului
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            Înțelegem nevoile fiecărui cursant și personalizăm experiența de
-            învățare pentru a face cursurile cât mai eficiente
-          </p>
-        </div>
+            <div>
+              <div className="flex items-center justify-center w-20 h-20 mx-auto bg-green-100 rounded-full">
+                <svg
+                  className="text-green-600 w-9 h-9"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinecap="round"
+                    stroke-width="1.5"
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                  />
+                </svg>
+              </div>
+              <h3 className="mt-8 text-lg font-semibold text-black">
+                Light & Dark Version
+              </h3>
+              <p className="mt-4 text-sm text-gray-600">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+              </p>
+            </div>
 
-        {/* Respect */}
-        <div className="flex flex-col items-center text-center p-6">
-          <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-orange-50">
-            <Layers className="w-8 h-8 text-orange-500" />
+            <div>
+              <div className="flex items-center justify-center w-20 h-20 mx-auto bg-red-100 rounded-full">
+                <svg
+                  className="text-red-600 w-9 h-9"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinecap="round"
+                    stroke-width="1.5"
+                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                  />
+                </svg>
+              </div>
+              <h3 className="mt-8 text-lg font-semibold text-black">
+                Filter Blocks
+              </h3>
+              <p className="mt-4 text-sm text-gray-600">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+              </p>
+            </div>
           </div>
-          <h3 className="text-xl font-semibold mb-3">Respect</h3>
-          <p className="text-sm text-muted-foreground">
-            Promovăm un mediu bazat pe sprijin și respect, esențiale pentru
-            dezvoltarea personală și succesul academic
-          </p>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
