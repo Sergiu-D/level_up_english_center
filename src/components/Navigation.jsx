@@ -48,7 +48,7 @@ const Navigation = () => {
   return (
     <>
       {/* Top Bar with Contact Info */}
-      <div className={`w-full bg-white transition-all duration-300 ${scrolled ? 'hidden' : 'block'}`}>
+      <div className={`w-full bg-white transition-all duration-300 hidden ${scrolled ? 'hidden' : 'md:block'}`}>
         <div className="container mx-auto px-4 md:px-6 py-3">
           <div className="flex flex-wrap justify-between items-center">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
@@ -85,7 +85,7 @@ const Navigation = () => {
       
       {/* Main Navigation */}
       {/* <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? '' : 'pt-4'}`}> */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? '' : 'mt-2'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? '' : 'md:mt-2'}`}>
         {/* <div className={`transition-all ${scrolled ? "w-full" : "container mx-auto px-4 md:px-6"}`}> */}
         <div className={`transition-all container mx-auto`}>
           {/* <div className={`transition-all ${scrolled ? 'bg-white shadow-lg py-3' : 'bg-white shadow-lg py-4 rounded-lg'}`}> */}
