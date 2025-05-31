@@ -42,7 +42,6 @@ const Navigation = () => {
     { href: '/', label: 'Acasă' },
     { href: '/despre-noi', label: 'Despre noi' },
     { href: '/cambridge', label: 'Cambridge' },
-    { href: '/adulti', label: 'Adulți' },
     { href: '/contact', label: 'Contact' },
   ];
 
