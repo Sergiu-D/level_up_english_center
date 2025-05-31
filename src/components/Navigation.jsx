@@ -12,7 +12,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY >= 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -48,21 +48,21 @@ const Navigation = () => {
   return (
     <>
       {/* Top Bar with Contact Info */}
-      <div className={`w-full bg-transparent transition-all duration-300 ${scrolled ? 'hidden' : 'block'}`}>
+      <div className={`w-full bg-white transition-all duration-300 ${scrolled ? 'hidden' : 'block'}`}>
         <div className="container mx-auto px-4 md:px-6 py-2">
           <div className="flex flex-wrap justify-between items-center">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <div className="flex items-center space-x-1">
                 <Phone size={16} className="text-blue-600" />
-                <span className="text-gray-700">(+40) 721-234-567</span>
+                <span className="text-gray-700 font-bold">(+40) 721-234-567</span>
               </div>
               <div className="flex items-center space-x-1">
                 <Mail size={16} className="text-blue-600" />
-                <span className="text-gray-700">contact@levelup.ro</span>
+                <span className="text-gray-700 font-bold">contact@levelup.ro</span>
               </div>
               <div className="hidden md:flex items-center space-x-1">
                 <MapPin size={16} className="text-blue-600" />
-                <span className="text-gray-700">Str. Academiei 35, București</span>
+                <span className="text-gray-700 font-bold">Str. Academiei 35, București</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -85,10 +85,13 @@ const Navigation = () => {
       
       {/* Main Navigation */}
       {/* <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? '' : 'pt-4'}`}> */}
-      <nav className={`fixed w-full z-50 transition-all duration-300`}>
-        <div className={`transition-all ${scrolled ? "w-full" : "container mx-auto px-4 md:px-6"}`}>
-          <div className={`transition-all ${scrolled ? 'bg-white shadow-lg py-3' : 'bg-white shadow-lg py-4 rounded-lg'}`}>
-            <div className={`transition-all ${scrolled ? "container mx-auto px-4 md:px-6" : ""}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? '' : 'mt-2'}`}>
+        {/* <div className={`transition-all ${scrolled ? "w-full" : "container mx-auto px-4 md:px-6"}`}> */}
+        <div className={`transition-all container mx-auto`}>
+          {/* <div className={`transition-all ${scrolled ? 'bg-white shadow-lg py-3' : 'bg-white shadow-lg py-4 rounded-lg'}`}> */}
+          <div className={`transition-all bg-white shadow-lg py-4 rounded-lg`}>
+            {/* <div className={`transition-all ${scrolled ? "container mx-auto px-4 md:px-6" : ""}`}> */}
+            <div className={`transition-all container mx-auto px-4 md:px-6`}>
               <div className="flex justify-between items-center px-4">
                 <Link href="/" className="flex items-center">
                   <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
