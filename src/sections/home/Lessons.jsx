@@ -38,7 +38,7 @@ export default function CourseSection() {
   }, []);
   
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div 
           ref={headerRef}

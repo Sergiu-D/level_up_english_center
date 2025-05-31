@@ -99,7 +99,7 @@ export default function CambridgeMethodology() {
   }, []);
   
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="w-full py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 

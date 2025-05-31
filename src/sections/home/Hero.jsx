@@ -42,7 +42,7 @@ export default function Hero() {
         <div className="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-purple-100 opacity-50 blur-3xl"></div>
       </div>
       
-      <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
+      <div className="container mx-auto px-4 pt-15 pb-10 md:py-32 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
           <div 
