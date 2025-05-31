@@ -1,179 +1,194 @@
 import Image from "next/image";
-import BorderGradient from "@/components/BorderGradient";
+import { motion } from "framer-motion";
 
 export default function Features() {
   return (
-    <section className="w-full pb-6 md:pb-24 lg:pb-32">
-      <div className="container px-4 md:px-6 relative">
-        <div className="grid items-start lg:grid-cols-2">
-          {/* Left side - Image (now overlapping) */}
-          <div className="relative z-10 lg:absolute  lg:top-1/2 lg:transform lg:-translate-y-1/2">
-            {/* <div class="hidden absolute top-0 end-0 translate-x-20 md:block lg:translate-x-0">
-              <svg
-                class="w-16 h-auto text-orange-500"
-                width="121"
-                height="135"
-                viewBox="0 0 121 135"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 16.4754C11.7688 27.4499 21.2452 57.3224 5 89.0164"
-                  stroke="currentColor"
-                  stroke-width="10"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M33.6761 112.104C44.6984 98.1239 74.2618 57.6776 83.4821 5"
-                  stroke="currentColor"
-                  stroke-width="10"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M50.5525 130C68.2064 127.495 110.731 117.541 116 78.0874"
-                  stroke="currentColor"
-                  stroke-width="10"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </div> */}
-            <Image
-              src="/assets/books.jpg"
-              alt="Product screenshot showing an e-commerce interface"
-              className="rounded-2xl shadow-lg ml-12"
-              width={700}
-              height={400}
-            />
-          </div>
-
-          {/* Right side - Content (now with background) */}
-          <div className="lg:col-start-2 bg-white rounded-3xl pr-8 lg:pr-12 pl-8 lg:pl-20 py-8 lg:py-12 shadow-lg relative z-0">
-            <div className="space-y-8">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-[2.5rem] leading-tight">
-                De ce sa ne alegi?
-              </h2>
-              <p>
-                Misiunea noastră este să cultivăm pasiunea pentru învățarea
-                limbilor străine și să pregătim cursanți pentru a deveni
-                cetățeni globali, informați și responsabili.
-              </p>
-              <div className="space-y-6">
-                {/* Feature Cards */}
-                <BorderGradient>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <svg
-                        className="w-6 h-6 text-blue-600"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 6V12M12 12V18M12 12H18M12 12H6"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-1">
-                        Advanced tools
-                      </h3>
-                      <p className="text-gray-600">
-                        Use Preline thoroughly thought and automated libraries
-                        to manage your businesses.
-                      </p>
-                    </div>
+    <section className="w-full py-16 md:py-24 bg-gradient-to-r from-blue-50 to-purple-50">
+      <div className="container px-4 md:px-6 mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            De ce să alegi <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Level Up</span>?
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Misiunea noastră este să cultivăm pasiunea pentru învățarea limbii engleze și să pregătim cursanți pentru a deveni cetățeni globali, informați și responsabili.
+          </p>
+        </motion.div>
+        
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left side - Image */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/why-level-up.jpg"
+                alt="Elevi la cursurile Level Up"
+                className="w-full h-auto object-cover"
+                width={600}
+                height={500}
+              />
+              
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
+                <div className="p-6">
+                  <div className="inline-block bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium mb-3">
+                    Experiență dovedită
                   </div>
-                </BorderGradient>
-                <BorderGradient>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <svg
-                        className="w-6 h-6 text-blue-600"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M4 5a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1H5a1 1 0 01-1-1v-5zM14 15a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1h-4a1 1 0 01-1-1v-5z"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-1">
-                        Smart dashboards
-                      </h3>
-                      <p className="text-gray-600">
-                        Quickly Preline sample components, copy-paste codes, and
-                        start right off.
-                      </p>
-                    </div>
-                  </div>
-                </BorderGradient>
-                <BorderGradient>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <svg
-                        className="w-6 h-6 text-blue-600"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-1">
-                        Powerful features
-                      </h3>
-                      <p className="text-gray-600">
-                        Reduce time and effort on building modern look design
-                        with Preline only.
-                      </p>
-                    </div>
-                  </div>
-                </BorderGradient>
-                <BorderGradient>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <svg
-                        className="w-6 h-6 text-blue-600"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-1">
-                        Powerful features
-                      </h3>
-                      <p className="text-gray-600">
-                        Reduce time and effort on building modern look design
-                        with Preline only.
-                      </p>
-                    </div>
-                  </div>
-                </BorderGradient>
+                  <h3 className="text-white text-xl font-semibold">
+                    Peste 5 ani de excelență în predarea limbii engleze
+                  </h3>
+                </div>
               </div>
             </div>
+          </motion.div>
+
+          {/* Right side - Content */}
+          <div className="space-y-8">
+            {/* Feature Cards */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-xl mb-2">
+                    Profesori calificați și experimentați
+                  </h3>
+                  <p className="text-gray-600">
+                    Echipa noastră este formată din profesori calificați, cu experiență internațională și certificări Cambridge, dedicați succesului elevilor noștri.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-xl mb-2">
+                    Grupe mici de studiu
+                  </h3>
+                  <p className="text-gray-600">
+                    Grupăm elevii în funcție de vârstă și nivel de cunoștințe, în clase de maximum 8-10 elevi, pentru a asigura atenție personalizată fiecărui cursant.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-xl mb-2">
+                    Materiale didactice de calitate
+                  </h3>
+                  <p className="text-gray-600">
+                    Utilizăm manuale și resurse Cambridge originale, completate cu materiale interactive și moderne, adaptate nivelului și intereselor elevilor.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-xl mb-2">
+                    Rezultate dovedite
+                  </h3>
+                  <p className="text-gray-600">
+                    Elevii noștri obțin rezultate excelente la examenele Cambridge, cu o rată de promovabilitate de peste 95% și progres vizibil în comunicarea în limba engleză.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

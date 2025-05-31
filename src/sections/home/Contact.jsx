@@ -1,67 +1,137 @@
-import { Mail, Phone, MapPin } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 export default function Contact() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
+    <section className="w-full py-16 md:py-24 lg:py-32 bg-gray-50">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col gap-4 md:gap-8">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Contactați-ne</h2>
-            <p className="mt-4 text-gray-500 dark:text-gray-400">
-              Ne puteți contacta pentru orice informație suplimentară.
-            </p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="space-y-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16 max-w-3xl mx-auto"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Contactați-ne</span> pentru informații
+          </h2>
+          <p className="text-lg text-gray-600">
+            Suntem aici pentru a răspunde la toate întrebările dumneavoastră despre cursurile noastre de limba engleză. Nu ezitați să ne contactați!
+          </p>
+        </motion.div>
+        <div className="grid gap-10 md:grid-cols-2">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-lg"
+          >
+            <div className="space-y-8">
               <div className="flex items-start gap-4">
-                <Mail className="h-6 w-6 mt-1" />
+                <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-lg text-white">
+                  <Mail className="h-6 w-6" />
+                </div>
                 <div className="space-y-2">
-                  <h3 className="font-bold">Email</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Scrieți-ne la adresa</p>
+                  <h3 className="font-bold text-lg">Email</h3>
+                  <p className="text-sm text-gray-500">Scrieți-ne la adresa</p>
                   <Link 
-                    href="mailto:contact@exemplu.ro"
-                    className="inline-block text-primary hover:underline"
+                    href="mailto:contact@levelup.ro"
+                    className="inline-block text-blue-600 hover:text-blue-800 font-medium"
                   >
-                    contact@exemplu.ro
+                    contact@levelup.ro
                   </Link>
                 </div>
               </div>
+              
               <div className="flex items-start gap-4">
-                <Phone className="h-6 w-6 mt-1" />
+                <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-lg text-white">
+                  <Phone className="h-6 w-6" />
+                </div>
                 <div className="space-y-2">
-                  <h3 className="font-bold">Telefon</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Apelați-ne la numărul</p>
+                  <h3 className="font-bold text-lg">Telefon</h3>
+                  <p className="text-sm text-gray-500">Apelați-ne la numărul</p>
                   <Link 
-                    href="tel:+40123456789"
-                    className="inline-block text-primary hover:underline"
+                    href="tel:+40721234567"
+                    className="inline-block text-blue-600 hover:text-blue-800 font-medium"
                   >
-                    +40 (123) 456-7890
+                    +40 721 234 567
                   </Link>
                 </div>
               </div>
+              
               <div className="flex items-start gap-4">
-                <MapPin className="h-6 w-6 mt-1" />
+                <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-lg text-white">
+                  <MapPin className="h-6 w-6" />
+                </div>
                 <div className="space-y-2">
-                  <h3 className="font-bold">Birou</h3>
-                  <p className="text-gray-500 dark:text-gray-400">Str. Exemplu 123, București, România</p>
+                  <h3 className="font-bold text-lg">Adresă</h3>
+                  <p className="text-gray-600">Str. Academiei 35, București, România</p>
                   <Link 
-                    href="https://maps.google.com"
-                    className="inline-flex items-center text-sm text-primary hover:underline"
+                    href="https://maps.google.com/?q=Strada+Academiei+35+București"
+                    target="_blank"
+                    className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium"
                   >
                     Obțineți indicații
-                    <span className="sr-only">Deschide harta cu indicații către biroul nostru</span>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
                   </Link>
                 </div>
               </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-lg text-white">
+                  <Clock className="h-6 w-6" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-bold text-lg">Program</h3>
+                  <p className="text-gray-600">Luni - Vineri: 9:00 - 19:00</p>
+                  <p className="text-gray-600">Sâmbătă: 10:00 - 14:00</p>
+                  <p className="text-gray-600">Duminică: Închis</p>
+                </div>
+              </div>
             </div>
-            <div className="aspect-video md:aspect-auto md:h-full min-h-[400px] w-full rounded-lg bg-gray-100 dark:bg-gray-800">
-              {/* Map placeholder - Replace with your actual map implementation */}
-            </div>
-          </div>
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="overflow-hidden rounded-xl shadow-lg h-full min-h-[450px]">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.8864284012855!2d26.09721867668961!3d44.43702710340236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f8c05c9%3A0x493984726f0235f9!2sStrada%20Academiei%2035%2C%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1685531234567!5m2!1sro!2sro" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Locația Level Up English Center"
+              className="w-full h-full min-h-[450px]"
+            ></iframe>
+          </motion.div>
         </div>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center"
+        >
+          <Link 
+            href="/contact" 
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium py-3 px-8 rounded-full hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2"
+          >
+            Contactează-ne pentru detalii complete
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+        </motion.div>
       </div>
     </section>
-  )
+  );
 }
-
