@@ -74,11 +74,11 @@ export default function CambridgeHero() {
             <div className="mt-12 flex flex-wrap items-center gap-8">
               <div className="flex items-center gap-2">
                 <Image 
-                  src="/images/cambridge-logo.png" 
+                  src="/images/cambridge/cae.jpg" 
                   alt="Cambridge Assessment English" 
                   width={80} 
                   height={40}
-                  className="h-auto w-auto"
+                  className="h-auto w-auto object-contain"
                 />
                 <span className="text-sm font-medium text-gray-500">Partener oficial</span>
               </div>
@@ -107,7 +107,7 @@ export default function CambridgeHero() {
           >
             <div className="relative mx-auto aspect-[4/3] overflow-hidden rounded-2xl shadow-xl md:ml-auto md:mr-0">
               <Image
-                src="/images/cambridge-exam.jpg"
+                src="/images/home/cambridge-exam.jpg"
                 alt="Examen Cambridge"
                 fill
                 className="object-cover"

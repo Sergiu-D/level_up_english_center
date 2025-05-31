@@ -51,7 +51,7 @@ export default function Team() {
       name: "Maria Popescu",
       role: "Director & Fondator",
       bio: "Cu peste 15 ani de experiență în predarea limbii engleze și certificare Cambridge CELTA, Maria a fondat Level Up cu viziunea de a oferi educație de calitate folosind metodologia Cambridge.",
-      image: "/images/team/director.jpg",
+      image: "/images/about/teacher-1.jpg",
       social: {
         linkedin: "https://linkedin.com/",
         email: "maria@levelup.ro"
@@ -61,7 +61,7 @@ export default function Team() {
       name: "Andrei Ionescu",
       role: "Profesor Senior",
       bio: "Andrei este specializat în pregătirea pentru examenele Cambridge FCE și CAE. Cu o experiență de 10 ani și un masterat în lingvistică aplicată, el aduce pasiune și expertiză în fiecare clasă.",
-      image: "/images/team/senior-teacher.jpg",
+      image: "/images/about/teacher-2.jpg",
       social: {
         linkedin: "https://linkedin.com/",
         email: "andrei@levelup.ro"
@@ -70,8 +70,8 @@ export default function Team() {
     {
       name: "Elena Dumitrescu",
       role: "Profesor pentru Copii",
-      bio: "Cu o specializare în pedagogie și psihologie infantilă, Elena creează lecții interactive și distractive pentru cei mici, folosind jocuri educaționale și activități creative.",
-      image: "/images/team/children-teacher.jpg",
+      bio: "Cu o specializare în pedagogie și psihologie infantilă, Elena crează lecții interactive și distractive pentru cei mici, folosind jocuri educaționale și activități creative.",
+      image: "/images/about/teacher-3.jpg",
       social: {
         linkedin: "https://linkedin.com/",
         email: "elena@levelup.ro"
@@ -81,7 +81,7 @@ export default function Team() {
       name: "Mihai Stancu",
       role: "Profesor pentru Adolescenți",
       bio: "Mihai are o abordare modernă și relevantă pentru adolescenți, integrând tehnologia și cultura contemporană în lecțiile sale de engleză pentru a menține elevii motivați și implicați.",
-      image: "/images/team/teen-teacher.jpg",
+      image: "/images/about/teacher-4.jpg",
       social: {
         linkedin: "https://linkedin.com/",
         email: "mihai@levelup.ro"
@@ -91,7 +91,7 @@ export default function Team() {
       name: "Alexandra Radu",
       role: "Profesor pentru Adulți",
       bio: "Alexandra este specializată în Business English și pregătirea pentru interviuri în limba engleză. Experiența sa în corporații internaționale aduce un plus de valoare cursurilor pentru adulți.",
-      image: "/images/team/adult-teacher.jpg",
+      image: "/images/cambridge/business-preliminary.jpg",
       social: {
         linkedin: "https://linkedin.com/",
         email: "alexandra@levelup.ro"
@@ -101,7 +101,7 @@ export default function Team() {
       name: "Cristina Marin",
       role: "Coordonator Academic",
       bio: "Cristina supraveghează calitatea programelor educaționale și dezvoltă curriculum-ul Level Up. Cu un doctorat în educație, ea asigură alinierea cursurilor la standardele Cambridge.",
-      image: "/images/team/academic-coordinator.jpg",
+      image: "/images/cambridge/business-vantage.jpg",
       social: {
         linkedin: "https://linkedin.com/",
         email: "cristina@levelup.ro"

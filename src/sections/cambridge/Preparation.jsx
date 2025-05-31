@@ -190,7 +190,7 @@ export default function Preparation() {
           >
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
               <Image
-                src="/images/cambridge-preparation.jpg"
+                src="/images/cambridge/business-preliminary.jpg"
                 alt="Pregătire Cambridge"
                 fill
                 className="object-cover"

@@ -3,8 +3,8 @@ import { Facebook, Instagram, MapPin, Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t bg-gradient-to-r from-blue-50 to-purple-50">
-      <div className="container px-4 md:px-6 py-12">
+    <footer className="w-full border-t">
+      <div className="container px-4 md:px-6 py-12 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col space-y-4">
             <Link className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" href="/">
@@ -96,19 +96,19 @@ export default function Footer() {
             <nav className="flex flex-col gap-4 md:flex-row md:gap-6">
               <Link
                 className="text-sm text-gray-500 hover:text-blue-600 transition-colors"
-                href="/politica-confidentialitate"
+                href="/politici/confidentialitate"
               >
                 Politica de Confidențialitate
               </Link>
               <Link
                 className="text-sm text-gray-500 hover:text-blue-600 transition-colors"
-                href="/conditii-utilizare"
+                href="/politici/termeni-conditii"
               >
                 Termeni și Condiții
               </Link>
               <Link
                 className="text-sm text-gray-500 hover:text-blue-600 transition-colors"
-                href="/cookies"
+                href="/politici/cookies"
               >
                 Politica de Cookies
               </Link>

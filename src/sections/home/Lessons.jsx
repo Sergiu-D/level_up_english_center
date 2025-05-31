@@ -38,7 +38,7 @@ export default function CourseSection() {
   }, []);
   
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div 
           ref={headerRef}
@@ -113,7 +113,7 @@ export default function CourseSection() {
               className="group relative overflow-hidden rounded-xl aspect-[4/3] shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <Image
-                src="/images/copii-curs.jpg"
+                src="/images/home/copii-curs.jpg"
                 alt="Cursuri de engleză pentru copii (6-10 ani)"
                 className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500"
                 width={400}
@@ -137,7 +137,7 @@ export default function CourseSection() {
               className="group relative overflow-hidden rounded-xl aspect-[4/3] shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <Image
-                src="/images/adolescenti-curs.jpg"
+                src="/images/home/adolescenti-curs.jpg"
                 alt="Cursuri de engleză pentru adolescenți"
                 className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500"
                 width={400}
@@ -161,7 +161,7 @@ export default function CourseSection() {
               className="group relative overflow-hidden rounded-xl aspect-[4/3] shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <Image
-                src="/images/adulti-curs.jpg"
+                src="/images/home/adulti-curs.jpg"
                 alt="Cursuri de engleză pentru adulți"
                 className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500"
                 width={400}
@@ -185,7 +185,7 @@ export default function CourseSection() {
               className="group relative overflow-hidden rounded-xl aspect-[4/3] shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <Image
-                src="/images/cambridge-exam.jpg"
+                src="/images/home/cambridge-exam.jpg"
                 alt="Pregătire pentru examene Cambridge"
                 className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500"
                 width={400}

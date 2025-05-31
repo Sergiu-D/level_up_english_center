@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 import Link from "next/link"
 import { animate, inView } from "@motionone/dom"
 import { useEffect, useRef } from "react"
+import Image from "next/image"
 
 export default function Contact() {
   // Create refs for animated elements
@@ -48,7 +49,7 @@ export default function Contact() {
   
   return (
     <section className="w-full py-16 md:py-24 lg:py-32 bg-gray-50">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto">
         <div 
           ref={headerRef}
           className="text-center mb-16 max-w-3xl mx-auto opacity-0"
@@ -133,18 +134,28 @@ export default function Contact() {
           </div>
           <div 
             ref={rightColumnRef}
-            className="overflow-hidden rounded-xl shadow-lg h-full min-h-[450px] opacity-0">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.8864284012855!2d26.09721867668961!3d44.43702710340236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f8c05c9%3A0x493984726f0235f9!2sStrada%20Academiei%2035%2C%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1685531234567!5m2!1sro!2sro" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Locația Level Up English Center"
-              className="w-full h-full min-h-[450px]"
-            ></iframe>
+            className="overflow-hidden rounded-xl shadow-lg h-full min-h-[450px] opacity-0 relative">
+            <Image 
+              src="/images/contact/office.jpg"
+              alt="Sediul Level Up English Center"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+              <h3 className="text-white font-bold text-xl mb-2">Vizitați-ne la sediu</h3>
+              <p className="text-white/90 mb-4">Strada Academiei 35, București</p>
+              <Link 
+                href="https://maps.google.com/?q=Strada+Academiei+35+București"
+                target="_blank"
+                className="inline-flex items-center gap-1 text-white font-medium bg-blue-600/90 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors"
+              >
+                Obțineți indicații
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
         

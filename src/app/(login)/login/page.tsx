@@ -1,5 +1,5 @@
 "use client"
-import {useState, useEffect} from "react";
+import {useState, useEffect, useCallback} from "react";
 import { REGEXP_ONLY_DIGITS } from "input-otp";
 import { useRouter } from 'next/navigation';
 // import localFont from "next/font/local";
@@ -19,8 +19,8 @@ export default function Login() {
   const router = useRouter();
   const maxLength = 5;
 
-    const handleSubmit = async (value: string) => {
-      setIsLoading(true);
+  const handleSubmit = useCallback(async (value: string) => {
+    setIsLoading(true);
     try {
       const response = await fetch('/api/validate-code', {
         method: 'POST',
@@ -43,7 +43,7 @@ export default function Login() {
       setResponse('An error occurred. Please try again later.');
       setIsLoading(false);
     }
-  };
+  }, [router]);
 
   const isValue = !value ? "" : value
 
@@ -51,7 +51,7 @@ export default function Login() {
     if (isValue?.length === maxLength) {
       handleSubmit(isValue);
     }
-  }, [value, isValue, maxLength, handleSubmit]);
+  }, [isValue, maxLength, handleSubmit]);
   
   // const geistSans = localFont({
   //   src: "./fonts/GeistVF.woff",

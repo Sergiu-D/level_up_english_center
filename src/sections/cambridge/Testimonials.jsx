@@ -12,7 +12,7 @@ export default function Testimonials() {
       name: "Andreea Popescu",
       role: "Studentă, Universitatea București",
       exam: "C1 Advanced (CAE)",
-      image: "/images/testimonials/student-1.jpg",
+      image: "/images/about/teacher-1.jpg",
       quote: "Datorită pregătirii intensive de la Level Up, am obținut un scor excelent la examenul CAE, care mi-a permis să obțin o bursă Erasmus. Profesorii sunt extraordinari și metodele de predare foarte eficiente!",
       score: "Grade A (200/210)"
     },
@@ -20,7 +20,7 @@ export default function Testimonials() {
       name: "Mihai Ionescu",
       role: "Elev, Clasa a XI-a",
       exam: "B2 First for Schools (FCE)",
-      image: "/images/testimonials/student-2.jpg",
+      image: "/images/about/teacher-2.jpg",
       quote: "Am început cursurile la Level Up cu 6 luni înainte de examenul FCE și am fost uimit de cât de mult am progresat. Simulările de examen m-au ajutat enorm să mă familiarizez cu formatul și să-mi gestionez timpul eficient.",
       score: "Grade B (173/190)"
     },
@@ -28,7 +28,7 @@ export default function Testimonials() {
       name: "Elena Dumitrescu",
       role: "Manager HR",
       exam: "C1 Business Higher",
-      image: "/images/testimonials/professional.jpg",
+      image: "/images/about/teacher-3.jpg",
       quote: "Ca profesionist în domeniul HR, aveam nevoie de o certificare de Business English pentru avansarea în carieră. Cursurile de la Level Up au fost perfect adaptate nevoilor mele, cu focus pe vocabularul și situațiile din mediul corporativ.",
       score: "Grade A (195/210)"
     },
@@ -36,7 +36,7 @@ export default function Testimonials() {
       name: "Alexandru Marin",
       role: "Elev, Clasa a VIII-a",
       exam: "B1 Preliminary for Schools (PET)",
-      image: "/images/testimonials/student-3.jpg",
+      image: "/images/about/teacher-4.jpg",
       quote: "Îmi era frică de examenul PET, dar profesorii de la Level Up m-au ajutat să-mi depășesc anxietatea și să mă concentrez pe învățare. Atmosfera prietenoasă și activitățile interactive au făcut pregătirea foarte plăcută.",
       score: "Pass with Distinction"
     },
@@ -44,7 +44,7 @@ export default function Testimonials() {
       name: "Maria Stancu",
       role: "Părinte",
       exam: "A2 Flyers (YLE)",
-      image: "/images/testimonials/parent.jpg",
+      image: "/images/about/teacher-1.jpg",
       quote: "Fiica mea de 11 ani a participat la cursurile pentru Young Learners și a adorat fiecare sesiune. Profesorii știu cum să facă învățarea distractivă pentru copii, iar rezultatele au fost peste așteptările noastre.",
       score: "15 scuturi din 15 posibile"
     }

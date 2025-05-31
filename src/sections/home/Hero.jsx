@@ -32,17 +32,90 @@ export default function Hero() {
     if (badgeTopRef.current) {
       animate(badgeTopRef.current, { opacity: [0, 1], y: [-20, 0] }, { duration: 0.5, delay: 1 });
     }
+    
+    // Animate background shapes
+    document.querySelectorAll('.animated-shape').forEach((shape, index) => {
+      const delay = index * 0.05; // Very short delay between shapes
+      const duration = 4 + Math.random() * 6; // Much faster animation (4-10 seconds)
+      
+      // Initial animation to fade in and position
+      animate(shape, { opacity: [0, 0.85] }, { duration: 0.5, delay }); // Faster fade-in with higher opacity
+      
+      // Continuous floating animation
+      const floatAnimation = () => {
+        const xMove = 20 + Math.random() * 30; // Much larger movement range
+        const yMove = 20 + Math.random() * 30; // Much larger movement range
+        const rotateAmount = 15 + Math.random() * 25; // More rotation
+        
+        animate(
+          shape, 
+          { 
+            x: [`${Math.random() > 0.5 ? '' : '-'}${xMove}px`, `${Math.random() > 0.5 ? '' : '-'}${xMove}px`],
+            y: [`${Math.random() > 0.5 ? '' : '-'}${yMove}px`, `${Math.random() > 0.5 ? '' : '-'}${yMove}px`],
+            rotate: [`${Math.random() > 0.5 ? '' : '-'}${rotateAmount}deg`, `${Math.random() > 0.5 ? '' : '-'}${rotateAmount}deg`]
+          }, 
+          { 
+            duration, 
+            easing: 'ease-in-out',
+            repeat: Infinity,
+            direction: 'alternate'
+          }
+        );
+      };
+      
+      floatAnimation();
+    });
   }, []);
   
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-r from-blue-50 to-purple-50">
+    <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-blue-200 via-indigo-300 to-purple-400">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Blurred gradient circles in background */}
         <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-blue-100 opacity-50 blur-3xl"></div>
         <div className="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-purple-100 opacity-50 blur-3xl"></div>
+        
+        {/* Animated geometric shapes */}
+        <div className="animated-shape absolute top-[10%] right-[15%] w-16 h-16 border-4 border-blue-200 rounded-lg rotate-12 opacity-0"></div>
+        <div className="animated-shape absolute top-[20%] left-[10%] w-20 h-20 bg-blue-100 rounded-full opacity-0"></div>
+        <div className="animated-shape absolute bottom-[30%] right-[20%] w-24 h-24 border-4 border-purple-200 rounded-full opacity-0"></div>
+        <div className="animated-shape absolute top-[40%] right-[30%] w-12 h-12 bg-purple-100 rounded-lg rotate-45 opacity-0"></div>
+        <div className="animated-shape absolute bottom-[15%] left-[25%] w-16 h-16 border-4 border-blue-200 rotate-12 opacity-0"></div>
+        
+        {/* Triangle shapes */}
+        <div className="animated-shape absolute top-[15%] left-[30%] opacity-0">
+          <div className="w-0 h-0 border-l-[20px] border-l-transparent border-b-[35px] border-b-blue-100 border-r-[20px] border-r-transparent"></div>
+        </div>
+        <div className="animated-shape absolute bottom-[25%] right-[10%] opacity-0">
+          <div className="w-0 h-0 border-l-[15px] border-l-transparent border-b-[25px] border-b-purple-100 border-r-[15px] border-r-transparent"></div>
+        </div>
+        
+        {/* Plus shapes */}
+        <div className="animated-shape absolute top-[60%] right-[40%] opacity-0">
+          <div className="relative w-16 h-4 bg-blue-100"></div>
+          <div className="absolute top-[-6px] left-[6px] w-4 h-16 bg-blue-100"></div>
+        </div>
+        <div className="animated-shape absolute top-[25%] left-[40%] opacity-0">
+          <div className="relative w-12 h-3 bg-purple-100"></div>
+          <div className="absolute top-[-4.5px] left-[4.5px] w-3 h-12 bg-purple-100"></div>
+        </div>
+        
+        {/* Zigzag line */}
+        <div className="animated-shape absolute bottom-[40%] left-[15%] w-24 h-8 opacity-0">
+          <svg width="100%" height="100%" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10 L20 0 L40 20 L60 0 L80 20 L100 10" stroke="#DBEAFE" strokeWidth="4" />
+          </svg>
+        </div>
+        
+        {/* Circle with dot */}
+        <div className="animated-shape absolute top-[70%] right-[25%] opacity-0">
+          <div className="w-12 h-12 rounded-full border-2 border-purple-200 flex items-center justify-center">
+            <div className="w-3 h-3 rounded-full bg-purple-200"></div>
+          </div>
+        </div>
       </div>
       
-      <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
+      <div className="container mx-auto px-4 pt-15 pb-10 md:py-32 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
           <div 
@@ -77,9 +150,9 @@ export default function Hero() {
             
             <div className="flex items-center justify-center lg:justify-start space-x-4 pt-6">
               <div className="flex -space-x-2">
-                <Image src="/images/student-1.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
-                <Image src="/images/student-2.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
-                <Image src="/images/student-3.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
+                <Image src="/images/about/teacher-1.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
+                <Image src="/images/about/teacher-2.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
+                <Image src="/images/about/teacher-3.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
               </div>
               <p className="text-sm text-gray-600">Peste <span className="font-bold">500+</span> de elevi mulțumiți</p>
             </div>
@@ -92,7 +165,7 @@ export default function Hero() {
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/hero-students.jpg"
+                src="/images/home/hero.jpg"
                 alt="Elevi Level Up învățând engleza"
                 width={600}
                 height={500}
