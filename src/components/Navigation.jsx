@@ -98,7 +98,7 @@ const Navigation = () => {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex space-x-8">
+                <div className="hidden lg:flex lg:items-center space-x-8">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
@@ -117,7 +117,8 @@ const Navigation = () => {
                 </div>
 
                 {/* Mobile Navigation Toggle */}
-                <div className="md:hidden">
+                {/* <div className="md:hidden"> */}
+                <div className="lg:hidden">
                   <button
                     onClick={toggleMenu}
                     className="text-gray-700 focus:outline-none"
