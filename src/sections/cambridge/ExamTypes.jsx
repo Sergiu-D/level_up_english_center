@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { animate, stagger, inView } from "@motionone/dom";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function ExamTypes() {
   const [activeTab, setActiveTab] = useState("young-learners");
@@ -107,15 +107,52 @@ export default function ExamTypes() {
     }
   };
 
+  const headerRef = useRef(null);
+  const tabsRef = useRef(null);
+  const contentRef = useRef(null);
+  
+  useEffect(() => {
+    // Header animation
+    if (headerRef.current) {
+      inView(headerRef.current, () => {
+        animate(headerRef.current, { opacity: [0, 1], y: [20, 0] }, { duration: 0.6 });
+        return () => {};
+      });
+    }
+    
+    // Tabs animation
+    if (tabsRef.current) {
+      inView(tabsRef.current, () => {
+        animate(tabsRef.current, { opacity: [0, 1], y: [20, 0] }, { duration: 0.5, delay: 0.2 });
+        return () => {};
+      });
+    }
+    
+    // Content animation
+    if (contentRef.current) {
+      inView(contentRef.current, () => {
+        animate(contentRef.current, { opacity: [0, 1], y: [20, 0] }, { duration: 0.5, delay: 0.3 });
+        return () => {};
+      });
+    }
+  }, []);
+  
+  // Re-animate content when tab changes
+  useEffect(() => {
+    if (contentRef.current) {
+      animate(contentRef.current, 
+        { opacity: [0.5, 1], x: [10, 0] },
+        { duration: 0.3 }
+      );
+    }
+  }, [activeTab]);
+  
   return (
     <section id="exam-types" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto mb-16 text-center"
+        <div 
+          ref={headerRef}
+          className="max-w-3xl mx-auto mb-16 text-center opacity-0"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Tipuri de <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">examene Cambridge</span>
@@ -123,10 +160,13 @@ export default function ExamTypes() {
           <p className="text-lg text-gray-600">
             Cambridge oferă o gamă completă de examene pentru toate vârstele și nivelurile, de la începători până la niveluri avansate.
           </p>
-        </motion.div>
+        </div>
 
         <div className="mb-12">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+          <div 
+            ref={tabsRef}
+            className="flex flex-wrap justify-center gap-2 md:gap-4 opacity-0"
+          >
             {Object.keys(examTypes).map((type) => (
               <button
                 key={type}
@@ -143,12 +183,10 @@ export default function ExamTypes() {
           </div>
         </div>
 
-        <motion.div
+        <div
           key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-white rounded-xl shadow-md overflow-hidden"
+          ref={contentRef}
+          className="bg-white rounded-xl shadow-md overflow-hidden opacity-0"
         >
           <div className="p-6 md:p-8 border-b border-gray-100">
             <h3 className="text-2xl font-bold mb-2">{examTypes[activeTab].title}</h3>
@@ -181,13 +219,10 @@ export default function ExamTypes() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+        <div
+          ref={useRef(null)}
           className="mt-12 text-center"
         >
           <Link 
@@ -199,7 +234,7 @@ export default function ExamTypes() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

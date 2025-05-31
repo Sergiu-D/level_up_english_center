@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { animate, stagger, inView } from "@motionone/dom";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -58,15 +58,42 @@ export default function Testimonials() {
     setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
   };
 
+  const headerRef = useRef(null);
+  const testimonialRef = useRef(null);
+  
+  useEffect(() => {
+    // Header animation
+    if (headerRef.current) {
+      inView(headerRef.current, () => {
+        animate(headerRef.current, { opacity: [0, 1], y: [20, 0] }, { duration: 0.6 });
+        return () => {};
+      });
+    }
+    
+    // Testimonial animation setup
+    if (testimonialRef.current) {
+      inView(testimonialRef.current, () => {
+        return () => {};
+      });
+    }
+  }, []);
+  
+  useEffect(() => {
+    // Animate testimonial change
+    if (testimonialRef.current) {
+      animate(testimonialRef.current, 
+        { opacity: [0, 1], x: [20, 0] },
+        { duration: 0.5 }
+      );
+    }
+  }, [activeIndex]);
+  
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto mb-16 text-center"
+        <div 
+          ref={headerRef}
+          className="max-w-3xl mx-auto mb-16 text-center opacity-0"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ce spun <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">cursanții noștri</span>
@@ -74,16 +101,13 @@ export default function Testimonials() {
           <p className="text-lg text-gray-600">
             Descoperă poveștile de succes ale absolvenților noștri care au obținut certificări Cambridge cu ajutorul Level Up.
           </p>
-        </motion.div>
+        </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <motion.div
+          <div
             key={activeIndex}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white rounded-xl shadow-lg overflow-hidden"
+            ref={testimonialRef}
+            className="bg-white rounded-xl shadow-lg overflow-hidden opacity-0"
           >
             <div className="grid md:grid-cols-5">
               <div className="md:col-span-2 relative">
@@ -154,7 +178,7 @@ export default function Testimonials() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
           
           <div className="flex justify-center mt-6">
             {testimonials.map((_, index) => (

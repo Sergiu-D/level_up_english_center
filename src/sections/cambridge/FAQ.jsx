@@ -1,8 +1,8 @@
 
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { animate, stagger, inView } from "@motionone/dom";
+import { useState, useEffect, useRef } from "react";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -46,15 +46,50 @@ export default function FAQ() {
     }
   ];
 
+  const headerRef = useRef(null);
+  const faqItemsRef = useRef([]);
+  const ctaRef = useRef(null);
+  
+  useEffect(() => {
+    // Header animation
+    if (headerRef.current) {
+      inView(headerRef.current, () => {
+        animate(headerRef.current, { opacity: [0, 1], y: [20, 0] }, { duration: 0.6 });
+        return () => {};
+      });
+    }
+    
+    // FAQ items animation
+    if (faqItemsRef.current.length > 0) {
+      inView(faqItemsRef.current, (info) => {
+        animate(info.target, 
+          { opacity: [0, 1], y: [20, 0] },
+          { delay: Array.from(faqItemsRef.current).indexOf(info.target) * 0.1, duration: 0.5 }
+        );
+        return () => {};
+      });
+    }
+    
+    // CTA animation
+    if (ctaRef.current) {
+      inView(ctaRef.current, () => {
+        animate(ctaRef.current, { opacity: [0, 1], y: [20, 0] }, { duration: 0.6, delay: 0.4 });
+        return () => {};
+      });
+    }
+  }, []);
+  
+  // Reset refs when FAQ items change
+  useEffect(() => {
+    faqItemsRef.current = faqItemsRef.current.slice(0, faqs.length);
+  }, [faqs.length]);
+  
   return (
     <section id="faq" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto mb-16 text-center"
+        <div 
+          ref={headerRef}
+          className="max-w-3xl mx-auto mb-16 text-center opacity-0"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Întrebări <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">frecvente</span>
@@ -62,17 +97,14 @@ export default function FAQ() {
           <p className="text-lg text-gray-600">
             Răspunsuri la cele mai comune întrebări despre examenele Cambridge și programele noastre de pregătire.
           </p>
-        </motion.div>
+        </div>
 
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="mb-4"
+              ref={el => faqItemsRef.current[index] = el}
+              className="mb-4 opacity-0"
             >
               <button
                 onClick={() => toggleQuestion(index)}
@@ -103,16 +135,13 @@ export default function FAQ() {
                   <p className="text-gray-600">{faq.answer}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center"
+        <div
+          ref={ctaRef}
+          className="mt-12 text-center opacity-0"
         >
           <p className="text-gray-600 mb-6">
             Ai alte întrebări despre examenele Cambridge sau programele noastre de pregătire?
@@ -126,7 +155,7 @@ export default function FAQ() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

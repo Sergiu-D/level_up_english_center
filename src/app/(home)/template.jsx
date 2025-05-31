@@ -1,17 +1,26 @@
 "use client"
-import { motion } from "framer-motion";
+import { animate } from "@motionone/dom";
+import { useEffect, useRef } from "react";
 
 export default function Template({ children }) {
+  const mainRef = useRef(null);
+  
+  useEffect(() => {
+    if (mainRef.current) {
+      animate(mainRef.current, 
+        { y: [20, 0], opacity: [0, 1] },
+        { easing: "ease-in-out", duration: 0.75 }
+      );
+    }
+  }, []);
+  
   return (
-    <motion.main
+    <main
+      ref={mainRef}
+      className="opacity-0"
       key="page"
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ ease: "easeInOut", duration: 0.75 }}
-      exit={{ size: 2 }}
-      className="flex flex-col items-center [&_>_*]:max-w-section [&_>_*]:w-full"
     >
         {children}
-    </motion.main>
+    </main>
   );
 }
