@@ -28,7 +28,7 @@ export default function AboutHero() {
   }, []);
   
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white py-16 pt-28 md:pt-32 lg:pt-36 pb-10 lg:pb-32">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/4">
         <div className="h-[300px] w-[300px] rounded-full bg-gradient-to-r from-blue-200/30 to-purple-200/30 blur-3xl" />

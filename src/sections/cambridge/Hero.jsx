@@ -29,7 +29,7 @@ export default function CambridgeHero() {
   }, []);
   
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white py-16 pt-28 md:pt-32 lg:pt-36 pb-10 lg:pb-32">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/4">
         <div className="h-[300px] w-[300px] rounded-full bg-gradient-to-r from-blue-200/30 to-purple-200/30 blur-3xl" />
@@ -50,7 +50,7 @@ export default function CambridgeHero() {
             <p className="mb-8 text-lg text-gray-600 md:text-xl">
               Pregătire specializată pentru toate nivelurile de examene Cambridge, de la Young Learners până la Proficiency, cu profesori certificați și materiale originale.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <Link 
                 href="#exam-types" 
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-medium text-white transition-all hover:shadow-lg"
@@ -72,17 +72,6 @@ export default function CambridgeHero() {
             </div>
             
             <div className="mt-12 flex flex-wrap items-center gap-8">
-              <div className="flex items-center gap-2">
-                <Image 
-                  src="/images/cambridge/cae.jpg" 
-                  alt="Cambridge Assessment English" 
-                  width={80} 
-                  height={40}
-                  className="h-auto w-auto object-contain"
-                />
-                <span className="text-sm font-medium text-gray-500">Partener oficial</span>
-              </div>
-              
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-600">
