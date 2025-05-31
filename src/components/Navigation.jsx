@@ -49,34 +49,34 @@ const Navigation = () => {
     <>
       {/* Top Bar with Contact Info */}
       <div className={`w-full bg-white transition-all duration-300 ${scrolled ? 'hidden' : 'block'}`}>
-        <div className="container mx-auto px-4 md:px-6 py-2">
+        <div className="container mx-auto px-4 md:px-6 py-3">
           <div className="flex flex-wrap justify-between items-center">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <div className="flex items-center space-x-1">
-                <Phone size={16} className="text-blue-600" />
+                <Phone size={20} className="text-blue-600" />
                 <span className="text-gray-700 font-bold">(+40) 721-234-567</span>
               </div>
               <div className="flex items-center space-x-1">
-                <Mail size={16} className="text-blue-600" />
+                <Mail size={20} className="text-blue-600" />
                 <span className="text-gray-700 font-bold">contact@levelup.ro</span>
               </div>
               <div className="hidden md:flex items-center space-x-1">
-                <MapPin size={16} className="text-blue-600" />
+                <MapPin size={20} className="text-blue-600" />
                 <span className="text-gray-700 font-bold">Str. Academiei 35, București</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
-                <Facebook size={18} />
+                <Facebook size={20} />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
-                <Twitter size={18} />
+                <Twitter size={20} />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
-                <Instagram size={18} />
+                <Instagram size={20} />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
-                <Linkedin size={18} />
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
