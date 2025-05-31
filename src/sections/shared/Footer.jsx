@@ -4,7 +4,7 @@ import { Facebook, Instagram, MapPin, Mail, Phone } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="w-full border-t bg-gradient-to-r from-blue-50 to-purple-50">
-      <div className="container px-4 md:px-6 py-12">
+      <div className="container px-4 md:px-6 py-12 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col space-y-4">
             <Link className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" href="/">
