@@ -35,7 +35,7 @@ export default function Hero() {
   }, []);
   
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-r from-blue-50 to-purple-50">
+    <section className="relative w-full min-h-screen overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-blue-100 opacity-50 blur-3xl"></div>

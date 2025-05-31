@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         ></meta>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-r from-blue-50 to-purple-50`}
       >
         <header className="max-w-8xl mx-auto">
           <Navigation />
