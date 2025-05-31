@@ -2,6 +2,7 @@
 
 import { animate, inView } from "@motionone/dom";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function WhoWeAre() {
   // Create refs for all animated elements
@@ -111,6 +112,14 @@ export default function WhoWeAre() {
                 </svg>
                 Povestea noastră
               </h3>
+              <div className="mb-6 relative h-48 rounded-lg overflow-hidden">
+                <Image 
+                  src="/images/about/who-we-are.jpg" 
+                  alt="Echipa Level Up" 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
               <p className="text-gray-600 mb-4">
                 Level Up a fost fondată în 2015 de către un grup de profesori pasionați de limba engleză și metodologia Cambridge. Am început cu doar două clase și am crescut constant, ajungând astăzi să avem peste 300 de elevi anual.
               </p>

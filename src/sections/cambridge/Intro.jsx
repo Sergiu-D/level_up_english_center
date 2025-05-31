@@ -58,7 +58,7 @@ export default function CambridgeIntro() {
           >
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
               <Image
-                src="/images/cambridge-certificate.jpg"
+                src="/images/cambridge/cpe.jpg"
                 alt="Certificat Cambridge"
                 fill
                 className="object-cover"

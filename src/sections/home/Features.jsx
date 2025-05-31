@@ -68,7 +68,7 @@ export default function Features() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/why-level-up.jpg"
+                src="/images/about/hero.jpg"
                 alt="Elevi la cursurile Level Up"
                 className="w-full h-auto object-cover"
                 width={600}

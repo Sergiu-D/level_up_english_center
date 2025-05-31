@@ -77,9 +77,9 @@ export default function Hero() {
             
             <div className="flex items-center justify-center lg:justify-start space-x-4 pt-6">
               <div className="flex -space-x-2">
-                <Image src="/images/student-1.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
-                <Image src="/images/student-2.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
-                <Image src="/images/student-3.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
+                <Image src="/images/about/teacher-1.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
+                <Image src="/images/about/teacher-2.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
+                <Image src="/images/about/teacher-3.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
               </div>
               <p className="text-sm text-gray-600">Peste <span className="font-bold">500+</span> de elevi mulțumiți</p>
             </div>
@@ -92,7 +92,7 @@ export default function Hero() {
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/hero-students.jpg"
+                src="/images/home/hero.jpg"
                 alt="Elevi Level Up învățând engleza"
                 width={600}
                 height={500}

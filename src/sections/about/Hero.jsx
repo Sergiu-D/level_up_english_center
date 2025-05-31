@@ -71,7 +71,7 @@ export default function AboutHero() {
           >
             <div className="relative mx-auto aspect-[4/3] overflow-hidden rounded-2xl shadow-xl md:ml-auto md:mr-0">
               <Image
-                src="/images/about-hero.jpg"
+                src="/images/about/hero.jpg"
                 alt="Echipa Level Up"
                 fill
                 className="object-cover"

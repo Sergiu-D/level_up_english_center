@@ -17,19 +17,19 @@ export default function ExamTypes() {
           name: "Pre A1 Starters",
           age: "7-8 ani",
           description: "Primul pas în învățarea limbii engleze, dezvoltând încrederea copiilor prin activități distractive.",
-          image: "/images/cambridge/starters.jpg"
+          image: "/images/cambridge/ket.jpg"
         },
         {
           name: "A1 Movers",
           age: "8-10 ani",
           description: "Al doilea nivel, care consolidează vocabularul de bază și structurile gramaticale simple.",
-          image: "/images/cambridge/movers.jpg"
+          image: "/images/cambridge/pet.jpg"
         },
         {
           name: "A2 Flyers",
           age: "10-12 ani",
           description: "Nivelul superior pentru copii, care pregătește pentru examenele Cambridge ulterioare.",
-          image: "/images/cambridge/flyers.jpg"
+          image: "/images/cambridge/fce.jpg"
         }
       ]
     },
@@ -65,7 +65,7 @@ export default function ExamTypes() {
           name: "B2 First (FCE)",
           age: "16+ ani",
           description: "Demonstrează că poți folosi engleza scrisă și vorbită la un nivel intermediar-avansat în contexte profesionale și academice.",
-          image: "/images/cambridge/fce-adult.jpg"
+          image: "/images/cambridge/fce.jpg"
         },
         {
           name: "C1 Advanced (CAE)",

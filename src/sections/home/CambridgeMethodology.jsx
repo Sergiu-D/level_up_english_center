@@ -125,7 +125,7 @@ export default function CambridgeMethodology() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/cambridge-methodology.jpg"
+                src="/images/home/cambridge-methodology.jpg"
                 alt="Metodologia Cambridge la Level Up"
                 width={600}
                 height={500}
