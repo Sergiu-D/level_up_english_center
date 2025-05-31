@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">1. Introducere</h2>
           <p>
-            Level Up English Center ("noi", "nouă", "al nostru") se angajează să protejeze confidențialitatea datelor dumneavoastră personale. Această Politică de Confidențialitate descrie modul în care colectăm, utilizăm și protejăm informațiile personale pe care ni le furnizați prin intermediul site-ului nostru web și al serviciilor noastre.
+            Level Up English Center (&quot;noi&quot;, &quot;nouă&quot;, &quot;al nostru&quot;) se angajează să protejeze confidențialitatea datelor dumneavoastră personale. Această Politică de Confidențialitate descrie modul în care colectăm, utilizăm și protejăm informațiile personale pe care ni le furnizați prin intermediul site-ului nostru web și al serviciilor noastre.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">2. Informațiile pe care le colectăm</h2>
@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
           <ul className="list-disc pl-6 mb-6 space-y-2">
             <li>Dreptul de acces la datele personale</li>
             <li>Dreptul la rectificarea datelor inexacte</li>
-            <li>Dreptul la ștergerea datelor ("dreptul de a fi uitat")</li>
+            <li>Dreptul la ștergerea datelor (&quot;dreptul de a fi uitat&quot;)</li>
             <li>Dreptul la restricționarea prelucrării</li>
             <li>Dreptul la portabilitatea datelor</li>
             <li>Dreptul de a vă opune prelucrării</li>
