@@ -51,7 +51,7 @@ export default function Login() {
     if (isValue?.length === maxLength) {
       handleSubmit(isValue);
     }
-  }, [value]);
+  }, [value, isValue, maxLength, handleSubmit]);
   
   // const geistSans = localFont({
   //   src: "./fonts/GeistVF.woff",

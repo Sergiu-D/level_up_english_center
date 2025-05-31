@@ -1,7 +1,7 @@
 
 "use client";
 
-import { animate, stagger, inView } from "@motionone/dom";
+import { animate, inView } from "@motionone/dom";
 import { useState, useEffect, useRef } from "react";
 
 export default function FAQ() {

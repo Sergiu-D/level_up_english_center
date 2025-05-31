@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { animate, inView } from "@motionone/dom";
+import { animate } from "@motionone/dom";
 import { useEffect, useRef } from "react";
 
 export default function Hero() {

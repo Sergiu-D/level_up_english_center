@@ -1,6 +1,6 @@
 "use client";
 
-import { animate, stagger, inView } from "@motionone/dom";
+import { animate, inView } from "@motionone/dom";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
@@ -143,7 +143,7 @@ export default function Testimonials() {
                     </div>
                     
                     <blockquote className="text-gray-700 italic mb-4">
-                      "{testimonials[activeIndex].quote}"
+                      &ldquo;{testimonials[activeIndex].quote}&rdquo;
                     </blockquote>
                   </div>
                 </div>

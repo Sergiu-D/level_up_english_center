@@ -1,6 +1,6 @@
 "use client";
 
-import { animate, stagger, inView } from "@motionone/dom";
+import { animate, inView } from "@motionone/dom";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
