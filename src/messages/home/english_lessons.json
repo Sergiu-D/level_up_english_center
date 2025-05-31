@@ -1,0 +1,54 @@
+[
+    {
+        "title": "Clasele 1-4",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugit mollitia a nam veniam expedita modi delectus perferendis fuga corrupti.",
+        "link":{
+            "label":"Afla mai multe",
+            "href": "#"
+
+        },
+        "image":{
+            "alt": "",
+            "src": "/assets/cursuri-1-4.png"
+        }
+    },
+    {
+        "title": "Clasele 5-8",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugit mollitia a nam veniam expedita modi delectus perferendis fuga corrupti.",
+        "link":{
+            "label":"Afla mai multe",
+            "href": "#"
+
+        },
+        "image":{
+            "alt": "",
+            "src": "/assets/cursuri-5-8.jpg"
+        }
+    },
+    {
+        "title": "Clasele 9-12",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugit mollitia a nam veniam expedita modi delectus perferendis fuga corrupti.",
+        "link":{
+            "label":"Afla mai multe",
+            "href": "#"
+
+        },
+        "image":{
+            "alt": "",
+            "src": "/assets/cursuri-liceu.jpg"
+        }
+    },
+    {
+        "title": "Clase adulti",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugit mollitia a nam veniam expedita modi delectus perferendis fuga corrupti.",
+        "link":{
+            "label":"Afla mai multe",
+            "href": "#"
+
+        },
+        "image":{
+            "alt": "",
+            "src": "/assets/cursuri-adulti.jpg"
+        }
+    }
+]

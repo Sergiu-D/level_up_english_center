@@ -5,7 +5,8 @@ export function middleware(req: NextRequest) {
   // Check if the AUTH_DEV cookie is present and valid
   const authCookie = req.cookies.get("dev_token");
   // Check the current environment
-  const isDevelopment = process.env.NODE_ENVIRONMENT === "development";
+  const isDevelopment =
+    process.env.NEXT_PUBLIC_NODE_ENVIRONMENT === "development";
   const devAuthValue = process.env.AUTH_DEV_TOKEN;
 
   // In production, skip validation and allow access
