@@ -96,19 +96,19 @@ export default function Footer() {
             <nav className="flex flex-col gap-4 md:flex-row md:gap-6">
               <Link
                 className="text-sm text-gray-500 hover:text-blue-600 transition-colors"
-                href="/politica-confidentialitate"
+                href="/politici/confidentialitate"
               >
                 Politica de Confidențialitate
               </Link>
               <Link
                 className="text-sm text-gray-500 hover:text-blue-600 transition-colors"
-                href="/conditii-utilizare"
+                href="/politici/termeni-conditii"
               >
                 Termeni și Condiții
               </Link>
               <Link
                 className="text-sm text-gray-500 hover:text-blue-600 transition-colors"
-                href="/cookies"
+                href="/politici/cookies"
               >
                 Politica de Cookies
               </Link>
