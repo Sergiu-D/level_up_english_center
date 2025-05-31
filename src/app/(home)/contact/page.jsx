@@ -1,11 +1,22 @@
+import ContactHero from "@/sections/contact/Hero";
+import ContactForm from "@/sections/contact/ContactForm";
+import ContactInfo from "@/sections/contact/ContactInfo";
+import Map from "@/sections/contact/Map";
 
-export default function Contact() {
+export const metadata = {
+  title: "Contact | Level Up - Școală de Engleză Cambridge",
+  description: "Contactează-ne pentru a afla mai multe despre cursurile noastre de engleză sau pentru a te înscrie. Găsește-ne în București, Str. Academiei 35.",
+};
+
+export default function ContactPage() {
   return (
-    <>
-    <div>Contact page</div>
-    <section className="bg-slate-200 h-[60vh]">First section</section>
-      <section className="bg-slate-500 !max-w-8xl h-[60vh]">Second section</section>
-      <section className="bg-slate-700 h-[60vh]">Third section</section>
-    </>
-  )
+    <main>
+      <ContactHero />
+      <div className="grid md:grid-cols-2 gap-0">
+        <ContactForm />
+        <ContactInfo />
+      </div>
+      <Map />
+    </main>
+  );
 }
