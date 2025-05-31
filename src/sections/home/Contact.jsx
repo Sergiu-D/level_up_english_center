@@ -1,3 +1,5 @@
+"use client";
+
 import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 import Link from "next/link"
 import { motion } from "framer-motion"

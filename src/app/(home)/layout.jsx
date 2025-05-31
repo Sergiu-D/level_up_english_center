@@ -1,3 +1,4 @@
+
 import localFont from "next/font/local";
 import "../globals.css";
 import Footer from "@/sections/shared/Footer"
