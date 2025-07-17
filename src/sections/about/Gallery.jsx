@@ -48,32 +48,32 @@ export default function Gallery() {
   
   const galleryImages = [
     {
-      src: "/images/about/gallery-1.jpg",
+      src: "/images/about/location-front.jpg",
       alt: "Sala de clasă Level Up",
       caption: "Sala noastră principală de clasă"
     },
     {
-      src: "/images/about/gallery-2.jpg",
+      src: "/images/about/location-top.jpg",
       alt: "Elevi în timpul cursului",
       caption: "Elevi participând activ la curs"
     },
     {
-      src: "/images/about/gallery-3.jpg",
+      src: "/images/about/games-class.jpg",
       alt: "Pregătire pentru examenul Cambridge",
       caption: "Sesiune de pregătire pentru examenul Cambridge"
     },
     {
-      src: "/images/about/gallery-4.jpg",
+      src: "/images/about/workshop-class.jpg",
       alt: "Activitate de grup",
       caption: "Activitate interactivă de grup"
     },
     {
-      src: "/images/cambridge/cae.jpg",
+      src: "/images/about/teaching-class.jpg",
       alt: "Profesor și elev",
       caption: "Interacțiune individuală profesor-elev"
     },
     {
-      src: "/images/cambridge/business-higher.jpg",
+      src: "/images/about/smart-board-class.jpg",
       alt: "Celebrarea succesului",
       caption: "Celebrarea reușitei la examenele Cambridge"
     }

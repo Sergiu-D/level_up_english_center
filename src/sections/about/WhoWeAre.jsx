@@ -112,9 +112,9 @@ export default function WhoWeAre() {
                 </svg>
                 Povestea noastră
               </h3>
-              <div className="mb-6 relative h-48 rounded-lg overflow-hidden">
+              <div className="mb-6 relative object-cover h-52 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/about/who-we-are.jpg" 
+                  src="/images/about/location-front.jpg" 
                   alt="Echipa Level Up" 
                   fill 
                   className="object-cover"

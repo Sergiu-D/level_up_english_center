@@ -148,14 +148,14 @@ export default function Hero() {
               </Link>
             </div>
             
-            <div className="flex items-center justify-center lg:justify-start space-x-4 pt-6">
+            {/* <div className="flex items-center justify-center lg:justify-start space-x-4 pt-6">
               <div className="flex -space-x-2">
                 <Image src="/images/about/teacher-1.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
                 <Image src="/images/about/teacher-2.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
                 <Image src="/images/about/teacher-3.jpg" width={40} height={40} className="rounded-full border-2 border-white" alt="Student" />
               </div>
               <p className="text-sm text-gray-600">Peste <span className="font-bold">500+</span> de elevi mulțumiți</p>
-            </div>
+            </div> */}
           </div>
           
           {/* Image */}

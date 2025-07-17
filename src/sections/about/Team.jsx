@@ -76,36 +76,6 @@ export default function Team() {
         linkedin: "https://linkedin.com/",
         email: "elena@levelup.ro"
       }
-    },
-    {
-      name: "Mihai Stancu",
-      role: "Profesor pentru Adolescenți",
-      bio: "Mihai are o abordare modernă și relevantă pentru adolescenți, integrând tehnologia și cultura contemporană în lecțiile sale de engleză pentru a menține elevii motivați și implicați.",
-      image: "/images/about/teacher-4.jpg",
-      social: {
-        linkedin: "https://linkedin.com/",
-        email: "mihai@levelup.ro"
-      }
-    },
-    {
-      name: "Alexandra Radu",
-      role: "Profesor pentru Adulți",
-      bio: "Alexandra este specializată în Business English și pregătirea pentru interviuri în limba engleză. Experiența sa în corporații internaționale aduce un plus de valoare cursurilor pentru adulți.",
-      image: "/images/cambridge/business-preliminary.jpg",
-      social: {
-        linkedin: "https://linkedin.com/",
-        email: "alexandra@levelup.ro"
-      }
-    },
-    {
-      name: "Cristina Marin",
-      role: "Coordonator Academic",
-      bio: "Cristina supraveghează calitatea programelor educaționale și dezvoltă curriculum-ul Level Up. Cu un doctorat în educație, ea asigură alinierea cursurilor la standardele Cambridge.",
-      image: "/images/cambridge/business-vantage.jpg",
-      social: {
-        linkedin: "https://linkedin.com/",
-        email: "cristina@levelup.ro"
-      }
     }
   ];
 
@@ -131,12 +101,12 @@ export default function Team() {
               ref={el => teamMemberRefs.current[index] = el}
               className="group overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 shadow-md transition-all duration-300 hover:shadow-lg opacity-0"
             >
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative h-96 overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-6">

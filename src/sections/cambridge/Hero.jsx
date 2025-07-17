@@ -94,19 +94,15 @@ export default function CambridgeHero() {
             ref={imageContainerRef}
             className="relative opacity-0"
           >
-            <div className="relative mx-auto aspect-[4/3] overflow-hidden rounded-2xl shadow-xl md:ml-auto md:mr-0">
+            <div className="relative mx-auto aspect-[4/4] overflow-hidden rounded-2xl shadow-xl md:ml-auto md:mr-0">
               <Image
-                src="/images/home/cambridge-exam.jpg"
+                src="/images/cambridge/motivational_picture_1.jpg"
                 alt="Examen Cambridge"
                 fill
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6 text-white">
-                <p className="text-lg font-bold">Certificare internațională</p>
-                <p className="text-sm">Recunoscută în peste 25,000 de instituții la nivel global</p>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
             
             {/* Floating badge */}
